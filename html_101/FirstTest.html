@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <script src="FirstTestJS.js">  </script>
+  <script src="FirstClass.js">  </script>
+
+
+  <script>
+
+  /* var names = ['Ashwini', 'Rohan', 'Sudhiroj']
+   for (i=0; i < names.length ; i++) {
+    myname(names[i]);
+  }*/
+
+  function fillUpText() {
+    var ashu_address = new Address('Catamaran St', 4, 94404, 'Foster City')
+    return ashu_address.fullAddress
+  }
+
+  function ChangeStyle(ElementId, StyleName)
+  {
+    document.getElementById(ElementId).style.display=StyleName;
+  }
+
+  </script>
+
+<title>FirstTestHTML</title>
+</head>
+
+<body>
+
+  <h1>This is a Heading</h1>
+  <p>This is a paragraph.</p>
+
+  <p id='where_to_fillup'> initial sample text ..... </p>
+
+  <button onclick="document.getElementById('where_to_fillup').innerHTML = fillUpText() "> Click </button>
+<br>
+<br>
+  <!--Date-->
+  <button onclick='document.getElementById("DateTextBox").innerHTML=Date()'>Today Date</button>
+  <p id='DateTextBox'> </p>
+
+<br>
+  <!--Image-->
+  <img id='bulb' src='pic_bulboff.gif'> </img>
+  <br>
+  <button onclick="document.getElementById('bulb').src='pic_bulbon.gif'">ON</button>
+  &nbsp&nbsp&nbsp&nbsp
+  <button onclick="document.getElementById('bulb').src='pic_bulboff.gif'">OFF</button>
+<br>
+<br>
+<!--Style - show and hide HTML text using display property-->
+
+<p id='StyleInline' style='display:inline'>This is inline style</p>
+<p id='StyleBlock' style='display:block'>This is block style</p>
+<p id='StyleTable style='display:table'>This is Table style</p>
+<p id='StyleListItem' style='display:list-item'>This is list item style</p>
+<p id='StyleInitial' style='display:initial'>This is initial style</p>
+<p id='StyleNone' style='display:None'>This is None style</p>
+
+ChangeStyle('StyleInline', 'none')
+
+<br>
+<button onclick="document.getElementById('StyleNone').style.display='block'">Click to show hidden text</button>
+<br>
+<button onclick="ChangeStyle('StyleInline', 'none')">Click to change style</button>
+
+
+
+
+
+
+
+
+</body>
+</html>
